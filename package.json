@@ -1,0 +1,15 @@
+{
+  "name": "Bhatt_D_ChattApp",
+  "version": "1.0.0",
+  "description": "my cool app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Dhruv",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
