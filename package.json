@@ -1,5 +1,5 @@
 {
-  "name": "Bhatt_D_ChattApp",
+  "name": "Bhatt_D_ChatApp",
   "version": "1.0.0",
   "description": "my cool app",
   "main": "app.js",
@@ -11,5 +11,14 @@
   "dependencies": {
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhruv9723/Bhatt_D_ChatApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhruv9723/Bhatt_D_ChatApp/issues"
+  },
+  "homepage": "https://github.com/dhruv9723/Bhatt_D_ChatApp#readme"
 }
