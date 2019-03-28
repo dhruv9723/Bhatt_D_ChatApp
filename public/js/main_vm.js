@@ -1,22 +1,17 @@
 import ChatMessage from './modules/ChatMessage.js';
 
-
-
 const socket = io();
 
-
-function logConnect({sID, message}) { 
-    console.log(sID, message);
+function setUserId({sID, message}) {
+    console.log('connected', sID, message);
     vm.socketID = sID;
-}
 
+}
 
 function appendMessage(message) {
     vm.messages.push(message);
-
 }
 
-// start vue or create
 const vm = new Vue({
     data: {
         socketID: "",
@@ -27,23 +22,18 @@ const vm = new Vue({
 
     methods: {
         dispatchMessage() {
-            // message event from client side
-            socket.emit('some text', { content: this.message, name: this.nickname || "Unknown"});
+            // send a chat message
+            socket.emit('chat message', { content: this.message, name: this.nickname || "Anonymous"} );
 
-            // to reset the field
-                this.message = "";
-
+            this.message = "";
         }
     },
 
     components: {
         newmessage: ChatMessage
     }
+}).$mount("#app");
 
-}).$mount(`#app`);
-
-socket.on('connected', setUserId);
-
+socket.addEventListener('connected', setUserId);
 socket.addEventListener('chat message', appendMessage);
-
-socket.addEventListener('disconnect', appendMessage); 
+socket.addEventListener('disconnect', appendMessage);
