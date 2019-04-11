@@ -3,8 +3,9 @@
 
     width: 45%;
     padding: 8px 12px;
-    background-color: white; 
-    border-radius: 8px;
+    background-image: linear-gradient(to right top, #e77575, #e66a6a, #e55f5e, #e35352, #e14646);
+    color: white;
+    border-radius: 15px;
     margin-bottom: 1rem;
 
     float:left;
@@ -13,6 +14,7 @@
 
 .my-message {
     float: right !important;
-    background-color: #86bf9d;
+    background-image: linear-gradient(to right top, #dc8989, #dd8282, #dd7a7a, #dd7373, #dd6b6b);
+    border-radius: 15px;
     color: white;
 }
